@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/stores/counterStore.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1729042498902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1729042510946,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-// src/stores/counterStore.ts\n+\n import { defineStore } from 'pinia'\n \n interface CounterState {\n   count: number\n"
+                }
+            ],
+            "date": 1729042498902,
+            "name": "Commit-0",
+            "content": "// src/stores/counterStore.ts\nimport { defineStore } from 'pinia'\n\ninterface CounterState {\n  count: number\n  name: string\n}\n\nexport const useCounterStore = defineStore('count', {\n  state: (): CounterState => ({\n    count: 4,\n    name: 'Zuldi'\n  }),\n  getters: {\n    doubleCount(state): number {\n      return state.count * 2\n    },\n  },\n  actions: {\n    decrement() {\n      this.count--\n    },\n    increment() {\n      this.count++\n    },\n  },\n})\n"
+        }
+    ]
+}

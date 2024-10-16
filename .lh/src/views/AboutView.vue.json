@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/views/AboutView.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1729042668064,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1729042668064,
+            "name": "Commit-0",
+            "content": "<!-- src/views/AboutView.vue -->\n<template>\n  <div class=\"text-center mt-4\">\n    <h1 class=\"text-2xl\">Ini Halaman About</h1>\n  </div>\n</template>\n\n<script setup lang=\"ts\">\n</script>\n"
+        }
+    ]
+}

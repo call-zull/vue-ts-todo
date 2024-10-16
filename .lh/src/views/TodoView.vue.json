@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/views/TodoView.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1729042634374,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1729042634374,
+            "name": "Commit-0",
+            "content": "<!-- src/views/TodoView.vue -->\r\n<template>\r\n    <div class=\"mt-4 w-full flex flex-col items-center\">\r\n      <h1 class=\"text-2xl\">Ini Halaman Todo List</h1>\r\n  \r\n      <div class=\"flex my-4\">\r\n        <input\r\n          v-model=\"newTodo\"\r\n          type=\"text\"\r\n          placeholder=\"Masukkan Todo baru\"\r\n          class=\"border-2 border-gray-300 p-2 rounded\"\r\n        />\r\n        <button\r\n          @click=\"addNewTodo\"\r\n          class=\"bg-blue-500 text-white p-2 rounded ml-2\"\r\n        >\r\n          Tambah\r\n        </button>\r\n      </div>\r\n  \r\n      <ul class=\"w-[500px] text-start\">\r\n        <li v-for=\"list in todoStore.todoList\" :key=\"list.id\" class=\"border-solid border-2 flex justify-between border-black my-2 rounded-md p-4\">\r\n          <span>\r\n            {{ list.name }}\r\n          </span>\r\n          <span class=\"flex\">\r\n            <button \r\n              class=\"bg-slate-500 p-1 rounded-md font-bold text-white\" \r\n              @click=\"todoStore.toggleTodoStatus(list.id)\">\r\n              {{ list.isDone ? 'Set Undone' : 'Set Done' }}\r\n            </button>\r\n            <button \r\n              @click=\"removeTodo(list.id)\"\r\n              class=\"bg-red-500 p-1 rounded-md font-bold text-white ml-2\">\r\n              Hapus\r\n            </button>\r\n          </span>\r\n        </li>\r\n      </ul>\r\n    </div>\r\n  </template>\r\n  \r\n  <script setup lang=\"ts\">\r\n  import { ref } from 'vue'\r\n  import { useTodoStore } from '../stores/todoStore'\r\n  \r\n  const todoStore = useTodoStore()\r\n  const newTodo = ref<string>('')\r\n  \r\n  const addNewTodo = (): void => {\r\n    if (newTodo.value.trim() !== '') {\r\n      todoStore.addTodo(newTodo.value)\r\n      newTodo.value = ''\r\n    }\r\n  }\r\n  \r\n  const removeTodo = (id: number): void => {\r\n    todoStore.removeTodo(id)\r\n  }\r\n  </script>\r\n  "
+        }
+    ]
+}

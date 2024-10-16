@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/stores/todoStore.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1729042527806,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1729042527806,
+            "name": "Commit-0",
+            "content": "// src/stores/todoStore.ts\r\nimport { defineStore } from 'pinia'\r\n\r\ninterface Todo {\r\n  id: number\r\n  name: string\r\n  isDone: boolean\r\n}\r\n\r\ninterface TodoState {\r\n  todoList: Todo[]\r\n}\r\n\r\nexport const useTodoStore = defineStore('todo', {\r\n  state: (): TodoState => ({\r\n    todoList: [\r\n      { id: 1, name: 'Belajar HTML', isDone: false },\r\n      { id: 2, name: 'Belajar CSS', isDone: false },\r\n      { id: 3, name: 'Belajar JavaScript', isDone: false },\r\n      { id: 4, name: 'Belajar PHP', isDone: false },\r\n      { id: 5, name: 'Belajar Laravel', isDone: false },\r\n    ]\r\n  }),\r\n  getters: {},\r\n  actions: {\r\n    toggleTodoStatus(id: number) {\r\n      const todo = this.todoList.find(item => item.id === id)\r\n      if (todo) {\r\n        todo.isDone = !todo.isDone\r\n      }\r\n    },\r\n    addTodo(name: string) {\r\n      const newTodo: Todo = {\r\n        id: this.todoList.length + 1,\r\n        name,\r\n        isDone: false,\r\n      }\r\n      this.todoList.push(newTodo)\r\n    },\r\n    removeTodo(id: number) {\r\n      this.todoList = this.todoList.filter(item => item.id !== id)\r\n    },\r\n  },\r\n})\r\n"
+        }
+    ]
+}

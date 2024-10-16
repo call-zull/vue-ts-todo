@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/App.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1729041523982,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1729041535915,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     <div class=\"wrapper\">\n       <HelloWorld msg=\"You did it!\" />\n \n       <nav>\n-        <RouterLink to=\"/\">Home</RouterLink>\n+        <RouterLink to=\"/\" class=\"text-blue-700\">Home</RouterLink>\n         <RouterLink to=\"/about\">About</RouterLink>\n       </nav>\n     </div>\n   </header>\n"
+                },
+                {
+                    "date": 1729041548411,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     <div class=\"wrapper\">\n       <HelloWorld msg=\"You did it!\" />\n \n       <nav>\n-        <RouterLink to=\"/\" class=\"text-blue-700\">Home</RouterLink>\n+        <RouterLink to=\"/\" class=\"\">Home</RouterLink>\n         <RouterLink to=\"/about\">About</RouterLink>\n       </nav>\n     </div>\n   </header>\n"
+                },
+                {
+                    "date": 1729041554677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     <div class=\"wrapper\">\n       <HelloWorld msg=\"You did it!\" />\n \n       <nav>\n-        <RouterLink to=\"/\" class=\"\">Home</RouterLink>\n+        <RouterLink to=\"/\">Home</RouterLink>\n         <RouterLink to=\"/about\">About</RouterLink>\n       </nav>\n     </div>\n   </header>\n"
+                },
+                {
+                    "date": 1729041735758,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,8 @@\n </script>\n \n <template>\n   <header>\n-    <img alt=\"Vue logo\" class=\"logo\" src=\"@/assets/logo.svg\" width=\"125\" height=\"125\" />\n \n     <div class=\"wrapper\">\n       <HelloWorld msg=\"You did it!\" />\n \n"
+                },
+                {
+                    "date": 1729042560709,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,21 +1,17 @@\n-<script setup lang=\"ts\">\n-import { RouterLink, RouterView } from 'vue-router'\n-import HelloWorld from './components/HelloWorld.vue'\n-</script>\n-\n+<!-- src/App.vue -->\n <template>\n-  <header>\n-\n-    <div class=\"wrapper\">\n-      <HelloWorld msg=\"You did it!\" />\n-\n-      <nav>\n-        <RouterLink to=\"/\">Home</RouterLink>\n-        <RouterLink to=\"/about\">About</RouterLink>\n-      </nav>\n-    </div>\n+  <header class=\"mt-4\">\n+    <nav class=\"flex gap-x-12 justify-center text-green-400 font-semibold\">\n+      <RouterLink to=\"/\">Home</RouterLink>\n+      <RouterLink to=\"/about\">About</RouterLink>\n+      <RouterLink to=\"/counter\">Count</RouterLink>\n+      <RouterLink to=\"/todolist\">Todo List</RouterLink>\n+    </nav>\n   </header>\n \n   <RouterView />\n </template>\n \n+<script setup lang=\"ts\">\n+import { RouterLink, RouterView } from 'vue-router'\n+</script>\n"
+                }
+            ],
+            "date": 1729041523982,
+            "name": "Commit-0",
+            "content": "<script setup lang=\"ts\">\nimport { RouterLink, RouterView } from 'vue-router'\nimport HelloWorld from './components/HelloWorld.vue'\n</script>\n\n<template>\n  <header>\n    <img alt=\"Vue logo\" class=\"logo\" src=\"@/assets/logo.svg\" width=\"125\" height=\"125\" />\n\n    <div class=\"wrapper\">\n      <HelloWorld msg=\"You did it!\" />\n\n      <nav>\n        <RouterLink to=\"/\">Home</RouterLink>\n        <RouterLink to=\"/about\">About</RouterLink>\n      </nav>\n    </div>\n  </header>\n\n  <RouterView />\n</template>\n\n"
+        }
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/views/CounterView.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1729042647829,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1729042647829,
+            "name": "Commit-0",
+            "content": "<!-- src/views/CounterView.vue -->\r\n<template>\r\n    <div class=\"mx-auto text-center mt-4\">\r\n      <h1 class=\"text-2xl\">Ini Halaman Count</h1>\r\n  \r\n      <p class=\"text-lg\">\r\n        {{ countStore.count }}\r\n        {{ countStore.name }}\r\n        {{ countStore.doubleCount }}\r\n      </p>\r\n      <div class=\"flex justify-center gap-8\">\r\n        <button @click=\"countStore.decrement\" class=\"bg-slate-300 p-1 rounded-md font-bold mt-2\">Dec</button>\r\n        <button @click=\"countStore.increment\" class=\"bg-slate-300 p-1 rounded-md font-bold mt-2\">Add</button>\r\n      </div>\r\n    </div>\r\n  </template>\r\n  \r\n  <script setup lang=\"ts\">\r\n  import { useCounterStore } from '../stores/counterStore'\r\n  \r\n  const countStore = useCounterStore()\r\n  </script>\r\n  "
+        }
+    ]
+}
